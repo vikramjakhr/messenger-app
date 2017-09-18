@@ -1,0 +1,11 @@
+{
+  "appSecret": "336c6a86f05c6ea0bca5cf5f96b00326",
+  "pageAccessToken": "EAADZCK1o5PwIBAC0ZC0jl0AbipbLvngV4JyZAZBMZCLImC0ixZBoB7PODp1GJ1ZAUMkQ8fEZCIwfslOn3HFcTD836KScbhqnIkAI8krrsKUpmIaOtfZCRGFcLADsJkFDghhFJc4Jo3AOMUmlN6k5eyL4gaXdMJb2IfZAOHH26Lk9CvngZDZD",
+  "validationToken": "kuchbhi-validation-token",
+  "serverURL": "https://www.vikramjakhar.com/",
+  "dbHost": "localhost",
+  "dbUser": "root",
+  "dbPassword": "igdefault",
+  "dbName": "messenger",
+  "loginURL": "https://jakhar.localtunnel.me/login.html"
+}

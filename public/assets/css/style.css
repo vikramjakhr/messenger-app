@@ -1,0 +1,20 @@
+/****************reset css starts here*****************/
+h1, h2, h3, h4, h5, h6, p, ul, li, body, html, form, fieldset,figure { margin:0; padding:0; outline:none; font-weight:normal; border:0 }
+form, fieldset { float:left; width:100% }
+img { border:0 none; max-width: 100%;max-height: 100%; height: auto;vertical-align: middle} 
+a,input { text-decoration:none; border:0; outline:none!important;} 
+ul { list-style:none; }
+.clear { clear:both;}
+/****************body*****************/
+body, html{height: 100%;}
+body{font-family:arial,sans-serif,Helvetica,monospace;color: #666;background: #000}
+*, *:before, *:after {box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-o-box-sizing: border-box;-ms-box-sizing: border-box;}
+.body_container{max-width: 300px;margin: 0 auto;margin-top: 10%;}
+.form_sec{float: left; width: 100%;padding: 15px;background: #009cff;}
+.form_sec li{width: 100%;float: left;padding: 2px 0;}
+.alignCenter{text-align: center;margin-bottom: 30px}
+.alignCenter img{float: none}
+.form_sec li input[type="text"]{float: left;font-size: 15px; margin: 0 10px 3px 0;padding: 3px 15px;width: 100%;border: 0;height: 35px;width: 100%}
+.form_sec li input[type="submit"]{float: left;font-size: 15px;background:  #ed1c24;border: medium none;color: #FFFFFF;cursor: pointer;padding: 10px 18px;width: auto;}
+.form_sec li input[type="submit"]:hover{background: #000}
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="ThemeBucket">
+    <!--<link rel="shortcut icon" href="./images/favicon.png"/>-->
+    <title>TataSky</title>
+    <!--Core CSS -->
+    <link href="./assets/css/style.css" rel="stylesheet"/>
+    <script type="text/javascript" src="./assets/js/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+<div class="body_container">
+    <div class="alignCenter"><img src="./assets/images/logoBig.png" alt=""/></div>
+    <form id="login-form" method="post">
+        <ul class="form_sec">
+            <li><input type="text" value="" placeholder="Subscriber Id" id="subscriberId"/></li>
+            <li><input type="text" value="" placeholder="Password" id="password"/></li>
+            <li><input type="submit" value="Login"/></li>
+        </ul>
+    </form>
+</div>
+<script type="text/javascript">
+    jQuery("#login-form").on("submit", function (event) {
+        event.preventDefault();
+        var subscriberId = jQuery("#subscriberId").val();
+        var password = jQuery("#password").val();
+        var accountLinkingToken = getQueryStringValue("account_linking_token");
+        var redirectURI = getQueryStringValue("redirect_uri");
+        jQuery.ajax({
+            url: '/authorize',
+            dataType: 'json',
+            type: 'post',
+            contentType: 'application/json',
+            data: JSON.stringify({
+                subscriberId: subscriberId,
+                password: password,
+                accountLinkingToken: accountLinkingToken,
+                redirectURI: redirectURI
+            }),
+            success: function (data, textStatus, jQxhr) {
+                console.log("success received for authentication");
+                console.log(data);
+                if (!data.isValid) {
+                    alert("Invalid Credentials.")
+                }
+                window.location.replace(data.redirectURISuccess);
+            },
+            error: function (jqXhr, textStatus, errorThrown) {
+                console.log("failed while request to authentication")
+            }
+        });
+    });
+
+    function getQueryStringValue(key) {
+        return decodeURIComponent(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + encodeURIComponent(key).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));
+    }
+
+</script>
+</body>
+</html>
