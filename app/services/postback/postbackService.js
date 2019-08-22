@@ -182,7 +182,8 @@ function setTopBoxCarouselView() {
                     type: "element_share"
                 }
             ]
-        }, {
+        },
+        {
             title: 'Tata Sky HD',
             image_url: "http://res.cloudinary.com/amur-labs/image/upload/v1486657746/2_pcscub.png",
             subtitle: 'Great picture quality, incredibly vivid colours, sharper images and stunning surround sound',

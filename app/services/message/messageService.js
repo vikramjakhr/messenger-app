@@ -299,7 +299,7 @@ module.exports.sendButtonMessage = function sendButtonMessage(recipientId, text,
  * Send a Structured Message (Generic Message type) using the Send API.
  *
  */
-module.exports.sendGenericMessage = function sendGenericMessage(recipientId, elements) {
+    module.exports.sendGenericMessage = function sendGenericMessage(recipientId, elements) {
     var messageData = {
         recipient: {
             id: recipientId
